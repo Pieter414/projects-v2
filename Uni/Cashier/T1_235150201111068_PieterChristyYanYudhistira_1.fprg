@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Julief"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-26 09.46.45 AM"/>
+        <attribute name="created" value="SnVsaWVmO0xBUFRPUC00TFEwVjhORDsyMDIzLTA5LTIzOzAzOjQ3OjE1IFBNOzI5NDY="/>
+        <attribute name="edited" value="SnVsaWVmO0xBUFRPUC00TFEwVjhORDsyMDIzLTA5LTIzOzAzOjUwOjI4IFBNOzE7SnVsaWVmO0xBUFRPUC00TFEwVjhORDsyMDIzLTA5LTIyOzA3OjM2OjAwIFBNO2NvYmEgY29iYSBubyAxLmZwcmc7Nzc2NA=="/>
+        <attribute name="edited" value="SnVsaWVmO0xBUFRPUC00TFEwVjhORDsyMDIzLTA5LTIzOzA1OjI4OjQyIFBNOzU7MzA1OQ=="/>
+        <attribute name="edited" value="UElFVEVSIENIUllTVFlZQU4gLlk7REVTS1RPUC0yVUVWSUhQOzIwMjMtMDktMjY7MDkuNDYuNDUgQU07NTszOTIx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="jamAwal, jamAkhir" type="String" array="False" size=""/>
+            <declare name="jam1, jam2, min1, min2, totalAwal, totalAkhir, selisihWaktu, selisihJam, selisihMenit" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan jam mulai     = &quot;" newline="True"/>
+            <input variable="jamAwal"/>
+            <output expression="&quot;Masukkan jam selesai   = &quot;" newline="True"/>
+            <input variable="jamAkhir"/>
+            <assign variable="jam1" expression="ToInteger (Substring(jamAwal, 0, 2))"/>
+            <assign variable="min1" expression="ToInteger (Substring(jamAwal, 3, 5))"/>
+            <assign variable="jam2" expression="ToInteger(Substring(jamAkhir, 0, 2))"/>
+            <assign variable="min2" expression="ToInteger (Substring(jamAkhir, 3, 5))"/>
+            <assign variable="totalAwal" expression="jam1*60 + min1"/>
+            <assign variable="totalAkhir" expression="jam2*60 + min2"/>
+            <assign variable="selisihWaktu" expression="totalAkhir-totalAwal"/>
+            <assign variable="selisihJam" expression="(totalAkhir-totalAwal)/60"/>
+            <assign variable="selisihMenit" expression="(totalAkhir-totalAwal)%60"/>
+            <output expression="&quot;Selisihnya adalah &quot;" newline="False"/>
+            <output expression="selisihJam" newline="False"/>
+            <output expression="&quot; jam &quot;" newline="False"/>
+            <output expression="selisihMenit" newline="False"/>
+            <output expression="&quot; menit &quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="Substring" type="String" variable="result">
+        <parameters>
+            <parameter name="text" type="String" array="False"/>
+            <parameter name="start" type="Integer" array="False"/>
+            <parameter name="length" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="String" array="False" size=""/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <assign variable="Result" expression="&quot;&quot;"/>
+            <assign variable="index" expression="start"/>
+            <while expression="index &lt; Len(Text) And length &gt; 0">
+                <assign variable="result" expression="result &amp; Char(Text, Index)"/>
+                <assign variable="index" expression="index + 1"/>
+                <assign variable="length" expression="length - 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
