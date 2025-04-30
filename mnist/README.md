@@ -1,3 +1,3 @@
 ### Deep Learning Review Repo
 
-This is repo for all my case study on "Deep Learning: Teori, Contoh, Perhitungan, dan Implementasi".
+This is repo for all my case study on "Deep Learning: Teori, Contoh, Perhitungan, dan Implementasi" on Chapter about Convolutional Neural Network.
